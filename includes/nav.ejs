@@ -1,0 +1,22 @@
+<nav>
+  <a href="/"
+    ><div class="logo"><span id="blue">Arnold</span>Gym</div></a
+  >
+  <div class="menu">
+    <a href="/" onclick="selectedNavBar(this)" class="selectednav">Home</a>
+    <a href="#about" onclick="selectedNavBar(this)">About</a>
+    <a href="#services" onclick="selectedNavBar(this)">Services</a>
+    <a href="#members" onclick="selectedNavBar(this)">Client</a>
+    <a href="#work" onclick="selectedNavBar(this)">Our Work</a>
+    <a href="#contact" onclick="selectedNavBar(this)">Contact</a>
+    <a href="/book" onclick="selectedNavBar(this)">Book</a>
+    <% if(!isAuthenticated) { %>
+    <a href="/login" onclick="selectedNavBar(this)">Login</a>
+    <%}%> <% if(isAuthenticated) { %>
+    <a href="/user"
+      ><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i
+    ></a>
+    <a class="logoutbtn" href="/logout">Logout</a>
+    <%}%>
+  </div>
+</nav>

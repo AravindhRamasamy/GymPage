@@ -1,0 +1,89 @@
+<%- include('../includes/header.ejs') %>
+<link rel="stylesheet" type="text/css" href="css/user.css" />
+<div class="pagebg">
+  <div class="registrationPage">
+    <div class="RegistrationMain">
+      <h2>Welcome <%= name %></h2>
+      <div class="registrationform">
+        <form action="/updateuserdetails" method="post">
+          <input
+            type="hidden"
+            name="userid"
+            id="userid"
+            value="<%= id %>"
+            required
+          />
+          <div class="infogroup">
+            <label>Name:</label><br />
+            <input
+              type="text"
+              name="username"
+              id="username"
+              value="<%= name %>"
+              required
+            />
+          </div>
+
+          <div class="infogroup">
+            <label>Address:</label><br />
+            <input
+              type="text"
+              name="address"
+              id="address"
+              value="<%= address %>"
+              required
+            />
+          </div>
+
+          <div class="infogroup">
+            <label>Email:</label><br />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value="<%= email %>"
+              required
+            />
+          </div>
+
+          <div class="infogroup">
+            <label>Phone Number:</label><br />
+            <input
+              type="text"
+              name="phonenumber"
+              id="phonenumber"
+              value="<%= phonenumber %>"
+              required
+            />
+          </div>
+          <button class="userbtn" type="submit">Update user information</button>
+        </form>
+
+        <div class="infogroup">
+          <label>Booked:</label><br />
+          <ul>
+            <% for ( let booked of bookeddates ){ %>
+            <li>
+              <form action="/deletebooking" method="post">
+                <div class="bookinglist">
+                  <%= new Date(booked.time).toDateString()+'     '+new
+                  Date(booked.time).toLocaleTimeString() %>
+                  <button class="deletebtn" type="submit">Delete</button>
+                </div>
+                <input
+                  type="hidden"
+                  value="<%= booked._id %>"
+                  name="bookedid"
+                />
+              </form>
+            </li>
+            <%}%>
+          </ul>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('../includes/footer.ejs') %>

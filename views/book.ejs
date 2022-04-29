@@ -1,0 +1,34 @@
+<%- include('../includes/header.ejs') %>
+<link rel="stylesheet" type="text/css" href="css/register.css" />
+<div class="pagebg">
+  <div class="registrationPage">
+    <div class="registrationillustration">
+      <img src="/images/book.svg" />
+    </div>
+    <div class="RegistrationMain">
+      <h2>Book</h2>
+      <% if (errorMessage) { %>
+      <div class="user-message user-message--error mt-3">
+        <%= errorMessage %>
+      </div>
+      <% } %>
+      <form action="/book" method="POST" class="registrationform">
+        <div class="form-group">
+          <label for="bookdate">Select a day</label>
+          <input type="date" name="bookdate" id="bookdate" required />
+        </div>
+
+        <div class="form-group">
+          <label for="booktime">Select a time</label>
+          <input type="time" name="booktime" id="booktime" required />
+        </div>
+
+        <div class="form-group">
+          <button class="btn" type="submit">Book</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('../includes/footer.ejs') %>

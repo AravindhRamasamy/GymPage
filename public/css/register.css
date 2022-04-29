@@ -1,0 +1,115 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.pagebg {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.registrationPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  /* min-height: 80vh; */
+  height: fit-content;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.registrationillustration {
+  width: 50%;
+  height: 100%;
+  padding: 2rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+.registrationillustration img {
+  height: auto;
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+.RegistrationMain {
+  width: 50%;
+  padding: 1rem;
+}
+.RegistrationMain h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 1rem 4rem;
+}
+.registrationform {
+  margin-top: 1rem;
+}
+.form-group {
+  width: 100%;
+  padding: 0 2rem;
+  margin-top: 1.6rem;
+}
+.form-group label {
+  font-weight: 500;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 0rem;
+}
+.form-group input {
+  display: block;
+  width: 100%;
+  border: none;
+  font-size: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+/* .form-group:focus-within{
+    margin-top: 2rem;
+} */
+.form-group:focus-within input {
+  border: none;
+  outline-width: 0;
+  border-bottom: 1px solid #6c63ff;
+}
+.form-group label {
+  margin-top: -1.25rem;
+  font-size: 0.75rem;
+  color: #263238;
+}
+.form-group:focus-within label {
+  color: #6c63ff;
+}
+.form-group button {
+  background-color: #6c63ff;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
+  float: right;
+  margin-top: 1rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .registrationillustration {
+    display: none;
+  }
+  .registrationPage {
+    justify-content: center;
+  }
+  .RegistrationMain {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .registrationPage {
+    width: 98%;
+    max-width: 350px;
+  }
+  .RegistrationMain {
+    max-width: 300px;
+  }
+}

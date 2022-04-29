@@ -1,0 +1,21 @@
+<section id="footer">
+    <h1>Arnold<span id="blue">Gym</span></h1>
+
+    <p>&copy; 2021 ArnoldGym, Toronto,CA</p>
+    <ul class="socialMedia" type="none">
+      <li><a target="_blank" href="https://www.instagram.com/"> <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li><a target="_blank" href="https://www.facebook.com/"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li><a target="_blank" href="https://www.linkedin.com/"> <i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+      <li><a target="_blank" href="https://www.twitter.com/"> <i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+  </ul>
+  </section>
+  <script>
+    function selectedNavBar(e)
+    {
+      var element = document.querySelectorAll('.menu a');
+      element.forEach(x=>x.classList.remove("selectednav"));      
+      e.classList.toggle("selectednav");
+    }
+  </script>
+</body>
+</html>
